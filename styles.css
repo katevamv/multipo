@@ -34,6 +34,8 @@ a:hover{color:var(--lime-300)}
 .hero .brand img{
   display:block;
   margin:0 auto;
+  width:clamp(200px, 28vw, 320px);
+  max-width:100%;
 }
 
 /* =========
