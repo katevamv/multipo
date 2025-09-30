@@ -4,16 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#4b0039" />
-  <title>Products — multipo</title>
+  <title>multipo — The Concept Store</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="page-products">
+<body data-page="home">
   <header class="site-header">
     <a class="brand" href="index.html" aria-label="multipo home">
       <img src="assets/logo.png" alt="multipo logo" />
@@ -24,140 +21,82 @@
       <span></span><span></span><span></span>
     </label>
 
-    <nav id="site-nav" class="site-nav" aria-label="Primary">
+    <nav class="site-nav" aria-label="Primary">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="products.html">Products</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#visit">Visit</a></li>
+        <li><a class="nav-home" href="index.html">Home</a></li>
+        <li><a class="nav-products" href="products.html">Products</a></li>
+        <li><a class="nav-about" href="about.html">About</a></li>
+        <li><a class="nav-visit" href="visit.html">Visit</a></li>
       </ul>
     </nav>
+    <label for="nav-toggle" class="backdrop" aria-hidden="true"></label>
   </header>
 
   <main>
-    <section class="section products-hero">
-      <div class="container">
-        <h1>Products</h1>
-        <p class="lead">
-          Browsing only — no checkout here. See something you love? Visit the store or DM us on socials to reserve. 💚
-        </p>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>multipo</h1>
+        <p class="tagline">THE CONCEPT STORE</p>
+        <p class="sub">Candles • Handmade Gifts • Cozy Decor — small-batch pieces that make spaces smile.</p>
+        <div class="cta-row">
+          <a class="btn btn-accent" href="products.html">Browse Products</a>
+          <a class="btn btn-ghost" href="visit.html">Find Us</a>
+        </div>
+      </div>
+      <div class="hero-bubbles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="filter-row" role="navigation" aria-label="Product filters">
-          <a class="pill active" href="#all">All</a>
-          <a class="pill" href="#candles">Candles</a>
-          <a class="pill" href="#handmade">Handmade</a>
-          <a class="pill" href="#decor">Decor</a>
-        </div>
-
-        <div class="card-grid products-grid">
-          <!-- Candle -->
-          <article class="card" id="candles">
-            <div class="card-img">
-              <img src="assets/products/candle-flower-top.jpg" alt="Flower-top soy candle in lime jar" />
-            </div>
-            <div class="card-body">
-              <h3>Flower-Top Soy Candle</h3>
-              <p>100% soy wax • cotton wick • approx. 35h burn.</p>
-              <ul class="meta">
-                <li>Scent: Citrus Bloom</li>
-                <li>Jar: Reusable glass</li>
-              </ul>
-              <div class="availability">Available in store</div>
-            </div>
-          </article>
-
-          <!-- Candle -->
-          <article class="card">
-            <div class="card-img">
-              <img src="assets/products/candle-bubble.jpg" alt="Chunky bubble candle in neon green" />
-            </div>
-            <div class="card-body">
-              <h3>Chunky Bubble Candle</h3>
-              <p>Playful shapes, subtle vanilla & tonka notes.</p>
-              <ul class="meta">
-                <li>Soy blend • hand-poured</li>
-                <li>Colors: Lime, Plum, Cream</li>
-              </ul>
-              <div class="availability">Available in store</div>
-            </div>
-          </article>
-
-          <!-- Handmade -->
-          <article class="card" id="handmade">
-            <div class="card-img">
-              <img src="assets/products/ceramic-tray.jpg" alt="Handmade ceramic trinket tray" />
-            </div>
-            <div class="card-body">
-              <h3>Petal Trinket Tray</h3>
-              <p>Hand-built ceramic tray with glossy glaze.</p>
-              <ul class="meta">
-                <li>~12 cm diameter</li>
-                <li>Food safe glaze</li>
-              </ul>
-              <div class="availability">Small batch</div>
-            </div>
-          </article>
-
-          <!-- Decor -->
-          <article class="card" id="decor">
-            <div class="card-img">
-              <img src="assets/products/felt-garland.jpg" alt="Felt flower garland in lime and plum" />
-            </div>
-            <div class="card-body">
-              <h3>Felt Flower Garland</h3>
-              <p>Retro florals for shelves, mantels, and parties.</p>
-              <ul class="meta">
-                <li>2 m strand</li>
-                <li>Hand-stitched</li>
-              </ul>
-              <div class="availability">Made locally</div>
-            </div>
-          </article>
-
-          <!-- Handmade -->
-          <article class="card">
-            <div class="card-img">
-              <img src="assets/products/macrame-hanger.jpg" alt="Macramé plant hanger in neon cord" />
-            </div>
-            <div class="card-body">
-              <h3>Macramé Plant Hanger</h3>
-              <p>Neon paracord with wooden bead accents.</p>
-              <ul class="meta">
-                <li>Fits 10–15 cm pots</li>
-                <li>Indoor use</li>
-              </ul>
-              <div class="availability">In stock</div>
-            </div>
-          </article>
-
-          <!-- Decor -->
-          <article class="card">
-            <div class="card-img">
-              <img src="assets/products/poster-retro.jpg" alt="Retro flower poster in lime and plum" />
-            </div>
-            <div class="card-body">
-              <h3>Retro Flower Poster</h3>
-              <p>Riso-style print on textured paper.</p>
-              <ul class="meta">
-                <li>A3 size</li>
-                <li>Limited edition</li>
-              </ul>
-              <div class="availability">Limited</div>
-            </div>
-          </article>
-        </div>
-
-        <p class="note">
-          Want to reserve or ask a question? DM us on Instagram or call the shop during open hours.
-        </p>
+        <h2>What we curate</h2>
+        <ul class="pill-list">
+          <li>Hand-poured soy candles</li>
+          <li>Upcycled & handmade goods</li>
+          <li>Joyful home decor</li>
+          <li>Gift bundles</li>
+          <li>Limited runs</li>
+        </ul>
       </div>
+    </section>
+
+    <section class="section">
+      <div class="container card-grid">
+        <article class="card">
+          <div class="card-img"><img src="assets/feat-candle.jpg" alt="Neon blossom soy candle"></div>
+          <div class="card-body">
+            <h3>Neon Blossom Candle</h3>
+            <p>Floral & citrus notes in a playful flower-top jar.</p>
+            <span class="badge">New</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="assets/feat-ceramic.jpg" alt="Handmade lime ceramic bud vase"></div>
+          <div class="card-body">
+            <h3>Lime Bud Vase</h3>
+            <p>Wheel-thrown ceramic with glossy neon glaze.</p>
+            <span class="badge">Handmade</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img"><img src="assets/feat-garland.jpg" alt="Retro felt flower garland"></div>
+          <div class="card-body">
+            <h3>Flower Garland</h3>
+            <p>Retro florals to brighten shelves, mirrors, and parties.</p>
+            <span class="badge">Decor</span>
+          </div>
+        </article>
+      </div>
+      <p class="container" style="text-align:center;margin-top:1rem">
+        <a href="products.html">See all products →</a>
+      </p>
     </section>
   </main>
 
+  <!-- Shared footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
@@ -177,10 +116,9 @@
       <div class="footer-block">
         <h4>Find us</h4>
         <address>
-          123 Brightway Lane<br>
-          Cityville, Country
+          123 Brightway Lane<br> Cityville, Country
         </address>
-        <p><a class="link" href="index.html#visit">Directions &amp; info</a></p>
+        <p><a class="link" href="visit.html">Directions &amp; info</a></p>
       </div>
 
       <div class="footer-block">
@@ -198,8 +136,7 @@
         </div>
       </div>
     </div>
-
-    <div class="legal">© <span id="year">2025</span> multipo — All rights reserved</div>
+    <div class="legal">© 2025 multipo — All rights reserved</div>
   </footer>
 </body>
 </html>
