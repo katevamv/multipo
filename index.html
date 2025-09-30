@@ -1,169 +1,205 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>multipo • The Concept Store</title>
-  <meta name="description" content="multipo — a concept store of candles, handmade products & joyful decorations." />
+  <meta name="theme-color" content="#4b0039" />
+  <title>Products — multipo</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="assets/favicon.svg">
 </head>
-<body>
-  <!-- Header / Nav -->
+<body class="page-products">
   <header class="site-header">
-    <div class="container header-wrap">
-      <a class="brand" href="index.html" aria-label="multipo home">
-        <!-- If you add your own logo, place it at assets/logo.png and uncomment the img line -->
-        <!-- <img src="assets/logo.png" alt="multipo logo" class="brand-logo"> -->
-        <span class="brand-word" aria-hidden="true">mult<span class="flower-i">i</span>po</span>
-        <span class="brand-tag">THE CONCEPT STORE</span>
-      </a>
+    <a class="brand" href="index.html" aria-label="multipo home">
+      <img src="assets/logo.png" alt="multipo logo" />
+    </a>
 
-      <!-- Accessible hamburger (pure CSS) -->
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Open site menu">
-      <label for="nav-toggle" class="nav-burger" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </label>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
 
-      <nav class="site-nav" aria-label="Primary">
-        <ul>
-          <li><a class="is-active" href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="products.html">Products</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#visit">Visit</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <h1>Hand-poured vibes. <br class="br-hide-sm">Happy little objects.</h1>
-        <p>Small-batch candles and handmade décor that glow in neon-lime joy. Drop by, sniff around, find your next favorite thing.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="products.html">Browse Products</a>
-          <a class="btn btn-ghost" href="#about">What is multipo?</a>
+  <main>
+    <section class="section products-hero">
+      <div class="container">
+        <h1>Products</h1>
+        <p class="lead">
+          Browsing only — no checkout here. See something you love? Visit the store or DM us on socials to reserve. 💚
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-row" role="navigation" aria-label="Product filters">
+          <a class="pill active" href="#all">All</a>
+          <a class="pill" href="#candles">Candles</a>
+          <a class="pill" href="#handmade">Handmade</a>
+          <a class="pill" href="#decor">Decor</a>
         </div>
+
+        <div class="card-grid products-grid">
+          <!-- Candle -->
+          <article class="card" id="candles">
+            <div class="card-img">
+              <img src="assets/products/candle-flower-top.jpg" alt="Flower-top soy candle in lime jar" />
+            </div>
+            <div class="card-body">
+              <h3>Flower-Top Soy Candle</h3>
+              <p>100% soy wax • cotton wick • approx. 35h burn.</p>
+              <ul class="meta">
+                <li>Scent: Citrus Bloom</li>
+                <li>Jar: Reusable glass</li>
+              </ul>
+              <div class="availability">Available in store</div>
+            </div>
+          </article>
+
+          <!-- Candle -->
+          <article class="card">
+            <div class="card-img">
+              <img src="assets/products/candle-bubble.jpg" alt="Chunky bubble candle in neon green" />
+            </div>
+            <div class="card-body">
+              <h3>Chunky Bubble Candle</h3>
+              <p>Playful shapes, subtle vanilla & tonka notes.</p>
+              <ul class="meta">
+                <li>Soy blend • hand-poured</li>
+                <li>Colors: Lime, Plum, Cream</li>
+              </ul>
+              <div class="availability">Available in store</div>
+            </div>
+          </article>
+
+          <!-- Handmade -->
+          <article class="card" id="handmade">
+            <div class="card-img">
+              <img src="assets/products/ceramic-tray.jpg" alt="Handmade ceramic trinket tray" />
+            </div>
+            <div class="card-body">
+              <h3>Petal Trinket Tray</h3>
+              <p>Hand-built ceramic tray with glossy glaze.</p>
+              <ul class="meta">
+                <li>~12 cm diameter</li>
+                <li>Food safe glaze</li>
+              </ul>
+              <div class="availability">Small batch</div>
+            </div>
+          </article>
+
+          <!-- Decor -->
+          <article class="card" id="decor">
+            <div class="card-img">
+              <img src="assets/products/felt-garland.jpg" alt="Felt flower garland in lime and plum" />
+            </div>
+            <div class="card-body">
+              <h3>Felt Flower Garland</h3>
+              <p>Retro florals for shelves, mantels, and parties.</p>
+              <ul class="meta">
+                <li>2 m strand</li>
+                <li>Hand-stitched</li>
+              </ul>
+              <div class="availability">Made locally</div>
+            </div>
+          </article>
+
+          <!-- Handmade -->
+          <article class="card">
+            <div class="card-img">
+              <img src="assets/products/macrame-hanger.jpg" alt="Macramé plant hanger in neon cord" />
+            </div>
+            <div class="card-body">
+              <h3>Macramé Plant Hanger</h3>
+              <p>Neon paracord with wooden bead accents.</p>
+              <ul class="meta">
+                <li>Fits 10–15 cm pots</li>
+                <li>Indoor use</li>
+              </ul>
+              <div class="availability">In stock</div>
+            </div>
+          </article>
+
+          <!-- Decor -->
+          <article class="card">
+            <div class="card-img">
+              <img src="assets/products/poster-retro.jpg" alt="Retro flower poster in lime and plum" />
+            </div>
+            <div class="card-body">
+              <h3>Retro Flower Poster</h3>
+              <p>Riso-style print on textured paper.</p>
+              <ul class="meta">
+                <li>A3 size</li>
+                <li>Limited edition</li>
+              </ul>
+              <div class="availability">Limited</div>
+            </div>
+          </article>
+        </div>
+
+        <p class="note">
+          Want to reserve or ask a question? DM us on Instagram or call the shop during open hours.
+        </p>
       </div>
-      <figure class="hero-art" aria-hidden="true">
-        <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?q=80&w=1200&auto=format&fit=crop" alt="" />
-      </figure>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Featured (teasers that link to Products) -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Fresh picks</h2>
-      <div class="grid cards">
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1602874801007-c8d6a22f1b8b?q=80&w=1200&auto=format&fit=crop" alt="Pastel pillar candles" />
-          <div class="card-body">
-            <h3>Pillar Candles</h3>
-            <p>Chunky, colorful, ready to be the centerpiece.</p>
-            <a class="card-link" href="products.html#candles">See more</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1610563166150-3d527e97d3c0?q=80&w=1200&auto=format&fit=crop" alt="Handmade ceramic cups" />
-          <div class="card-body">
-            <h3>Handmade Ceramics</h3>
-            <p>Perfectly imperfect mugs, trays & tiny bowls.</p>
-            <a class="card-link" href="products.html#handmade">See more</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1601905394175-96f9b522cce2?q=80&w=1200&auto=format&fit=crop" alt="Playful home decorations" />
-          <div class="card-body">
-            <h3>Decorations</h3>
-            <p>Playful objects to brighten any corner.</p>
-            <a class="card-link" href="products.html#decor">See more</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section section-alt">
-    <div class="container about-grid">
-      <div>
-        <h2 class="section-title">About multipo</h2>
-        <p><strong>multipo</strong> is a tiny concept store with a big personality—curating candles, handmade goods and decorations that spark joy. We work with local makers and pour our own small-batch scents in-house.</p>
-        <ul class="list-check">
-          <li>Small-batch & handmade</li>
-          <li>Eco-friendly soy & beeswax blends</li>
-          <li>Gift-ready packaging</li>
-        </ul>
-      </div>
-      <div class="about-photo">
-        <img src="https://images.unsplash.com/photo-1543087903-1ac2ec7aa8c5?q=80&w=1200&auto=format&fit=crop" alt="Shelf with candles and handmade goods" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact anchor (for menu link) -->
-  <section id="contact" class="section">
-    <div class="container contact-cta">
-      <h2 class="section-title">Come say hi</h2>
-      <p>We’re a sniff-test first kind of store. Pop in, we’ll light your favorite scent. 💡</p>
-      <a class="btn btn-primary" href="https://maps.google.com" target="_blank" rel="noopener">Open in Maps</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <span class="brand-word small">mult<span class="flower-i">i</span>po</span>
-        <p class="muted">THE CONCEPT STORE</p>
+        <img src="assets/logo.png" alt="" />
+        <p>Playful candles, handmade goods, and joyful decor.</p>
       </div>
 
       <div class="footer-block">
-        <h3>Visit</h3>
-        <p>123 Concept Street, Cityname<br>Plum District</p>
-        <p><a class="muted" href="https://maps.google.com" target="_blank" rel="noopener">Get directions</a></p>
-      </div>
-
-      <div class="footer-block">
-        <h3>Hours</h3>
-        <ul class="hours">
-          <li><span>Mon–Fri</span><span>10:00–19:00</span></li>
-          <li><span>Sat</span><span>10:00–17:00</span></li>
-          <li><span>Sun</span><span>Closed</span></li>
+        <h4>Hours</h4>
+        <ul class="hours hours--compact">
+          <li><strong>Mon–Fri:</strong> 10:00–19:00</li>
+          <li><strong>Sat:</strong> 10:00–18:00</li>
+          <li><strong>Sun:</strong> Closed</li>
         </ul>
       </div>
 
       <div class="footer-block">
-        <h3>Follow</h3>
+        <h4>Find us</h4>
+        <address>
+          123 Brightway Lane<br>
+          Cityville, Country
+        </address>
+        <p><a class="link" href="index.html#visit">Directions &amp; info</a></p>
+      </div>
+
+      <div class="footer-block">
+        <h4>Follow</h4>
         <div class="socials">
           <a aria-label="Instagram" href="#" class="social">
-            <!-- Instagram SVG -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM17.5 6a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.75-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/></svg>
           </a>
           <a aria-label="Facebook" href="#" class="social">
-            <!-- Facebook SVG -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 22v-8h3l.5-4H13V7.5c0-1.1.3-1.9 2-1.9h1.7V2.2A26.5 26.5 0 0 0 14.8 2C11.9 2 10 3.7 10 7v3H7v4h3v8z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 22v-9h3l.5-3H13V8.25c0-.86.28-1.5 1.7-1.5H17V4.1C16.6 4 15.5 4 14.3 4 11.9 4 10 5.66 10 8.2V10H7v3h3v9h3z"/></svg>
           </a>
           <a aria-label="TikTok" href="#" class="social">
-            <!-- TikTok SVG -->
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 8.1a7 7 0 0 1-4.5-1.6v7.2a5.7 5.7 0 1 1-5.7-5.7c.2 0 .4 0 .6.1v3.1a2.6 2.6 0 1 0 1.9 2.5V2h3.2a7 7 0 0 0 4.5 4v2.1z"/></svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3a6 6 0 0 0 5 5v3.1a8.2 8.2 0 0 1-4.2-1.2l-.1 6.2a5.8 5.8 0 1 1-5.8-5.8c.3 0 .7 0 1 .1V13a2.8 2.8 0 1 0 2.8 2.8L13.9 3H15z"/></svg>
           </a>
         </div>
       </div>
     </div>
 
-    <p class="tiny muted center">&copy; <span id="y"></span> multipo. Handmade with love.</p>
-    <script>
-      // tiny enhancement: current year (no framework, optional)
-      document.getElementById('y').textContent = new Date().getFullYear();
-    </script>
+    <div class="legal">© <span id="year">2025</span> multipo — All rights reserved</div>
   </footer>
 </body>
 </html>
