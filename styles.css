@@ -31,6 +31,7 @@ a{color:var(--lime-400); text-decoration:underline; text-underline-offset:2px}
 a:hover{color:var(--lime-300)}
 .container{width:min(1100px,92%); margin-inline:auto}
 .section{padding: clamp(2.5rem, 5vw, 4rem) 0}
+.brand{width:150px; margin-left:150px}
 
 /* =========
    Header / Nav (shared)
